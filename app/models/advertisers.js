@@ -1,7 +1,7 @@
 var advertisers = [
   {
-    'return': {
-      'advertiser': 'Mercado Porto Seguro',
+    'advertisers': {
+      'name': 'Mercado Porto Seguro',
       'category': 'mercado',
       'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
       'phones': {

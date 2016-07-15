@@ -1,0 +1,47 @@
+<div class="row">
+
+  <div class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0)">Encontre em Sampa</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="javascript:void(0)">Categorias</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input class="form-control col-sm-8" placeholder="Buscar anunciante" type="text">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h2 class="center text-center">Empresas anunciantes em destaque:</h2>
+
+    <div class="col-md-4">
+
+      <div class="thumbnail">
+        <h3 class="text-center center">{{advertisers.name}}</h3>
+        <img src="http://www.lorempixel.com/400/300" class="img-responsive" alt="...">
+        <div class="caption">
+          <p>{{advertisers.address.address}}, {{advertisers.address.number}}</p>
+          <p>{{advertisers.phones.phone[0]}} / {{advertisers.phones.cel[0]}}</p>
+          <hr />
+          <p>Stars: {{advertisers.starts}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
