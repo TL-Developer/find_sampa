@@ -3,6 +3,7 @@ var advertisers = [
     'return': {
       'advertiser': 'Mercado Porto Seguro',
       'category': 'mercado',
+      'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
       'phones': {
         'phone': [
           '(11)2585-5588','(11)2585-5588'
@@ -30,6 +31,10 @@ var advertisers = [
         {
           'icon': 'facebook',
           'facebook': 'http://www.facebook.com/mercado_porto_seguro'
+        },
+        {
+          'icon': 'email',
+          'email': 'mercadoportoseguro@portoseguro.com.br'
         }
       ],
       'office_hours': [
@@ -43,6 +48,7 @@ var advertisers = [
         }
       ],
       'images': {
+        'logo':'img/logo.png',
         'banner': [
           'img/image_banner.png'
         ],
@@ -66,7 +72,10 @@ var advertisers = [
       'created': {
         'date':'15/07/2016',
         'hours': '11:48'
-      }
+      },
+      'meta_tags': [
+          'mercado, pães, varejo, atacado'
+      ]
     }
   }
 ];
