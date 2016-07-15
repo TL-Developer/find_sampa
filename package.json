@@ -1,0 +1,31 @@
+{
+  "name": "find_sampa",
+  "version": "0.0.1",
+  "description": "System guide sampa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TL-Developer/find_sampa.git"
+  },
+  "keywords": [
+    "Guias",
+    "Sampa"
+  ],
+  "author": "Tiago Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TL-Developer/find_sampa/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "config": "^1.21.0",
+    "express": "^4.14.0",
+    "express-load": "^1.1.15",
+    "helmet": "^2.1.1",
+    "method-override": "^2.3.6"
+  }
+}

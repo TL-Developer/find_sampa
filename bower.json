@@ -1,0 +1,21 @@
+{
+  "name": "find_sampa",
+  "description": "System guide sampa",
+  "main": "index.js",
+  "authors": [
+    "Tiago Lima"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Guias",
+    "Sampa"
+  ],
+  "homepage": "https://github.com/TL-Developer/find_sampa",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
