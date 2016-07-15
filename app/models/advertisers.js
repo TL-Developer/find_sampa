@@ -55,7 +55,11 @@ var advertisers = [
       'comments': [
         {
           'name': 'Tiago Lima',
-          'comment': 'Super mercado ótimo'
+          'comment': 'Super mercado ótimo',
+          'created': {
+            'date':'15/07/2016',
+            'hours': '11:48'
+          }
         }
       ],
       'starts': 10,
