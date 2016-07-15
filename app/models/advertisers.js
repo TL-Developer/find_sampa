@@ -58,7 +58,11 @@ var advertisers = [
           'comment': 'Super mercado ótimo'
         }
       ],
-      'starts': 10
+      'starts': 10,
+      'created': {
+        'date':'15/07/2016',
+        'hours': '11:48'
+      }
     }
   }
 ];

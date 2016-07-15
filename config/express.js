@@ -11,6 +11,8 @@ module.exports = function(){
 
   app.set('port', process.env.PORT || 8080);
 
+  app.set('json spaces', 4);
+
   app.use(function(req, res, next){
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
