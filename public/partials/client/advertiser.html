@@ -1,0 +1,115 @@
+<div class="row">
+
+  <div ng-include="'partials/client/includes/menu-toolbar.html'"></div>
+
+  <div class="row banner-anunciante">
+
+    <div class="info-adv border-radius">
+
+      <div class="container">
+
+        <h1>{{advertiser.name}}</h1>
+        <p>{{advertiser.description}}</p>
+
+      </div>
+
+    </div>
+
+    <img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.banner}}" class="img-responsive img-full-width img-banner" alt="{{advertiser.name}}">
+  </div>
+
+  <div class="container">
+
+    <div class="col-md-12">
+      <h3>Endereço:</h3>
+      <p>{{advertiser.address.address}}, {{advertiser.address.number}} - {{advertiser.address.neighbourhood}} - {{advertiser.address.city}}</p>
+
+
+      <div class="col-md-8 sem-margin">
+        <div class="mapa-anunciante">
+          MAPA COM LAT E LONG
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <h4>Criar uma rota:</h4>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="{{advertiser.address.address}}, {{advertiser.address.number}}">
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Destino">
+          </div>
+
+          <button type="submit" class="btn-primary btn-raised">CRIAR ROTA</button>
+        </form>
+      </div>
+
+      <hr>
+    </div>
+
+    <div class="col-md-8">
+
+      <h3>Contato:</h3>
+      <p>Tel: {{advertiser.phones.phone[0]}} / {{advertiser.phones.phone[1]}}</p>
+      <p>Cel: {{advertiser.phones.cel[0]}} / {{advertiser.phones.cel[1]}}</p>
+
+      <hr>
+
+      <h3>Comentários:</h3>
+
+      <div class="thumbnail row border-radius thumb-comentarios" ng-repeat="advComments in advertiser.comments">
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <img src="img/user_default.jpg" class="img-responsive img-full-width" alt="">
+        </div>
+
+        <div class="col-md-10 col-sm-10 col-xs-10">
+          <h4>{{advComments.name}}</h4>
+          <p class="small">{{advComments.created.date}} às {{advComments.created.hours}}</p>
+          <p>{{advComments.comment}}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+      <h3>Horário de funcionamento:</h3>
+      <p ng-repeat="advHour in advertiser.office_hours">{{advHour.day}}: {{advHour.info}}</p>
+
+      <hr>
+
+      <h3>Meta tags:</h3>
+      <p>{{advertiser.meta_tags[0]}}</p>
+
+      <hr>
+
+      <h3>Galeria de imagens:</h3>
+      <ul class="list-inline lista-galeria-imagens">
+        <li class="col-md-4 col-xs-4 col-sm-4"><img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.galery[0]}}" alt="{{advertiser.images.galery[0]}}" class="img-responsive img-full-width border-radius"></li>
+        <li class="col-md-4 col-xs-4 col-sm-4"><img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.galery[0]}}" alt="{{advertiser.images.galery[0]}}" class="img-responsive img-full-width border-radius"></li>
+        <li class="col-md-4 col-xs-4 col-sm-4"><img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.galery[0]}}" alt="{{advertiser.images.galery[0]}}" class="img-responsive img-full-width border-radius"></li>
+      </ul>
+
+    </div>
+
+    <hr><br /><br />
+
+    <div class="col-md-12">
+
+      <h3>Anunciantes relacionados:</h3>
+      <div class="col-md-3" ng-repeat="advRelation in advertisersRelation track by advRelation._id">
+        <a href="/#/anunciantes/{{advRelation._id}}">
+          <div class="thumbnail">
+            <h4 class="text-center center">{{advRelation.name}}</h4>
+            <img src="img/advertisers/{{advRelation.path}}/galery_1.jpg" class="img-responsive" alt="{{advertisersRelation.name}}">
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div ng-include="'partials/client/includes//footer.html'"></div>

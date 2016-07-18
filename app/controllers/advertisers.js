@@ -8,5 +8,18 @@ module.exports = function(app){
     res.json(advertisersModel);
   };
 
+  // GET ID
+  controller.getAdvertisersId = function(req, res){
+
+    var _id = req.params.id;
+
+    advertiser = [];
+
+    advertiser.push(advertisersModel[_id]);
+
+    res.json(advertiser);
+
+  };
+
   return controller;
 };

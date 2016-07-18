@@ -1,47 +1,72 @@
 <div class="row">
 
-  <div class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="javascript:void(0)">Encontre em Sampa</a>
-      </div>
-      <div class="navbar-collapse collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="javascript:void(0)">Categorias</a></li>
-        </ul>
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input class="form-control col-sm-8" placeholder="Buscar anunciante" type="text">
+  <div ng-include="'partials/client/includes/menu-toolbar.html'"></div>
+
+  <div class="row banner-principal">
+
+    <div class="info-adv border-radius">
+
+      <div class="container">
+
+        <h1>O que procura?</h1>
+        <form>
+
+          <div class="col-md-3">
+            <label class="control-label">Categorias:</label>
+            <select>
+                <option value="teste">tests</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label class="control-label">Região:</label>
+            <select>
+                <option value="teste">tests</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label class="control-label">Bairro:</label>
+            <select>
+                <option value="teste">tests</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label for="recipient-name" class="control-label">Endereço:</label>
+            <input type="text" class="form-control" id="recipient-name">
           </div>
         </form>
+
       </div>
+
     </div>
+
+    <img src="img/banner.jpg" class="img-responsive img-full-width img-banner" alt="">
   </div>
 
   <div class="container">
 
     <h2 class="center text-center">Empresas anunciantes em destaque:</h2>
 
-    <div class="col-md-4">
-
-      <div class="thumbnail">
-        <h3 class="text-center center">{{advertisers.name}}</h3>
-        <img src="http://www.lorempixel.com/400/300" class="img-responsive" alt="...">
-        <div class="caption">
-          <p>{{advertisers.address.address}}, {{advertisers.address.number}}</p>
-          <p>{{advertisers.phones.phone[0]}} / {{advertisers.phones.cel[0]}}</p>
-          <hr />
-          <p>Stars: {{advertisers.starts}}</p>
+    <div class="col-md-4" ng-repeat="adv in advertisers track by adv._id">
+      <a href="/#/anunciantes/{{adv._id}}">
+        <div class="thumbnail">
+          <h3 class="text-center center">{{adv.name}}</h3>
+          <img ng-src="img/advertisers/{{adv.path}}/{{adv.images.logo}}" class="img-responsive" alt="{{adv.name}}">
+          <div class="caption">
+            <p>{{adv.address.address}}, {{adv.address.number}}</p>
+            <p>{{adv.phones.phone[0]}} / {{adv.phones.cel[0]}}</p>
+            <hr />
+            <p>Stars: {{adv.starts}}</p>
+          </div>
         </div>
-      </div>
-
+      </a>
     </div>
 
   </div>
 
 </div>
+
+
+<div ng-include="'partials/client/includes//footer.html'"></div>
