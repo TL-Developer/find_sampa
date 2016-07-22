@@ -15,7 +15,7 @@ angular.module('find-sampa')
   };
   listCategories();
 
-  $scope.selectRegiao = $routeParams.region;
+  //$scope.selectRegiao = $routeParams.region;
 
   var getAdvertisers = function(regiao){
     $scope.loading = 'loading';
@@ -24,11 +24,23 @@ angular.module('find-sampa')
       $scope.loading = '';
     });
   };
-
   getAdvertisers($routeParams.region);
 
-  $scope.regiao = function(regiao) {
-    getAdvertisers(regiao);
+  $scope.selectCategorie = function(categorie) {
+    $scope.loading = 'loading';
+
+    if(categorie){
+      services.advertisersGet($routeParams.region).query(function(advertisers){
+        var advertisersCategorie = [];
+
+        advertisersCategorie.push({result: advertisers[0][categorie]});
+
+        $scope.advertisers = advertisersCategorie;
+        $scope.loading = '';
+      });
+    }else {
+      getAdvertisers($routeParams.region);
+    }
   };
 
 

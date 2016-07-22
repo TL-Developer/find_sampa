@@ -16,9 +16,8 @@
         <form>
 
           <div class="col-md-6">
-            <select class="form-control">
-                <option value=""></option>
-                <option value="mercados">Mercados</option>
+            <select class="form-control" ng-model="categorieSelected" ng-options="cat.categorie as cat.name for cat in categories" ng-change="selectCategorie(categorieSelected)">
+              <option value="">-- Todas --</option>
             </select>
           </div>
 
@@ -33,9 +32,15 @@
 
   <div class="container">
 
-    <h2 class="info" ng-show="loading">loading...</h2>
+    <h2 class="info" ng-show="loading">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </h2>
 
-    <h2 class="center text-center">Empresas anunciantes em destaque:</h2>
+    <h2 class="center text-center" ng-hide="loading">Empresas anunciantes em destaque:</h2>
     <div class="col-md-12" ng-repeat="adv in advertisers track by adv._id" ng-hide="loading">
       <div ng-repeat="(categorie, value) in adv" class="col-md-4">
         <div ng-repeat="advert in value">

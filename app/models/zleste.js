@@ -5,7 +5,7 @@ var zleste = [
         '_id': 0,
         'name': 'Mercado Porto Seguro',
         'path': 'mercado-porto-seguro',
-        'category': 'mercados',
+        'category': 'Mercados',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': {
           'phone': [
@@ -84,7 +84,7 @@ var zleste = [
         '_id': 0,
         'name': 'Mecânica do José',
         'path': 'mercado-porto-seguro',
-        'category': 'mercado',
+        'category': 'Mecãnicas',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': {
           'phone': [

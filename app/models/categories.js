@@ -1,7 +1,12 @@
 var categories = [
-  'Mercados','Padarias','Mecânicas', 'Locadoras',
-  'Academias','Tatoo','Agências de Modelos','Zoológicos',
-  'Restaurantes','Bares','Buffet'
+  {
+    name: 'Mercados',
+    categorie: 'mercados'
+  },
+  {
+    name: 'Mecânicas',
+    categorie: 'mecanicas'
+  }
 ];
 
 module.exports = function(){
