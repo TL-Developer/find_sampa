@@ -8,16 +8,13 @@
 
       <div class="container">
 
-        <h1>Selecione a região</h1>
+        <h1>Selecione uma Categoria</h1>
         <form>
 
           <div class="col-md-6">
-            <select ng-model='selectRegiao' ng-change="regiao(selectRegiao)" class="form-control">
+            <select class="form-control">
                 <option value=""></option>
-                <option value="zleste">Zona Leste</option>
-                <option value="znorte">Zona Norte</option>
-                <option value="zoeste">Zona Oeste</option>
-                <option value="zsul">Zona Sul</option>
+                <option value="mercados">Mercados</option>
             </select>
           </div>
 
@@ -36,21 +33,31 @@
 
     <h2 class="center text-center">Empresas anunciantes em destaque:</h2>
 
-    <div class="col-md-12" ng-repeat="adv in advertisers track by adv._id">
-      <div ng-repeat="(categorie, value) in adv" class="col-md-4">
-        <div ng-repeat="advert in value">
-          <a href="/#/{{selectRegiao}}/anunciantes/{{categorie}}/{{advert._id}}">
-            <div class="thumbnail">
-              <h3 class="text-center center">{{advert.name}}</h3>
-              <img ng-src="img/advertisers/{{advert.path}}/{{advert.images.logo}}" class="img-responsive" alt="{{adv.name}}">
-              <div class="caption">
-                <p>{{advert.address.address}}, {{advert.address.number}}</p>
-                <p>{{advert.phones.phone[0]}} / {{advert.phones.cel[0]}}</p>
-                <hr />
-                <p>Stars: {{advert.starts}}</p>
+
+      <div ng-repeat="adv in advertisers">
+        <div class="col-md-3">
+        <div ng-repeat="(region, value) in adv">
+
+          <div ng-repeat="(cat, val) in value">
+
+            <div ng-repeat="advertiser in val">
+
+              <div ng-repeat="ad in advertiser">
+                <a href="/#/{{region}}/anunciantes/{{ad.category}}/{{ad._id}}">
+                  <div class="thumbnail">
+                    <h3 class="text-center center">{{ad.name}}</h3>
+                    <img ng-src="img/advertisers/{{ad.path}}/{{ad.images.logo}}" class="img-responsive" alt="{{adv.name}}">
+                    <div class="caption">
+                      <p>{{ad.address.address}}, {{ad.address.number}}</p>
+                      <p>{{ad.phones.phone[0]}} / {{ad.phones.cel[0]}}</p>
+                      <hr />
+                      <p>Stars: {{ad.starts}}</p>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>

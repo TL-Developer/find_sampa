@@ -32,6 +32,7 @@ module.exports = function(){
   app.use(express.static('./public'));
 
   expressLoad('models', {cwd: 'app'})
+   .then('models/advertisers.js')
    .then('controllers')
    .then('routes')
    .into(app);

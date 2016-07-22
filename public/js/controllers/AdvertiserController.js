@@ -7,6 +7,15 @@ angular.module('find-sampa')
 
   $scope.routeParams = $routeParams;
 
+  $scope.categories = [];
+
+  var listCategories = function(){
+    services.categoriesGet().query(function(categories) {
+      $scope.categories = categories;
+    });
+  };
+  listCategories();
+
   services.advertisersGetId($routeParams.region, $routeParams.categorie, $routeParams.advertiserId).query(function(advertiser){
     $scope.advertiser = advertiser[0];
   });

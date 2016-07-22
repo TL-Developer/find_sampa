@@ -6,6 +6,15 @@ angular.module('find-sampa')
   $scope.advertisers = [];
   $scope.mensagem = '';
 
+  $scope.categories = [];
+
+  var listCategories = function(){
+    services.categoriesGet().query(function(categories) {
+      $scope.categories = categories;
+    });
+  };
+  listCategories();
+
   $scope.selectRegiao = $routeParams.region;
 
   var getAdvertisers = function(regiao){

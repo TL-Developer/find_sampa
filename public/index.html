@@ -21,6 +21,15 @@
 </head>
 <body>
 
+  <div id="simple-dialog" class="modal fade in" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1 style="color: #000;">DOCUMENTAÇÃO API</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div ng-view></div>
 
@@ -31,6 +40,7 @@
   <!-- Dropdown.js -->
   <script type="text/javascript" src="lib/bootstrap-material-design/dist/js/material.js"></script>
   <script type="text/javascript" src="lib/bootstrap-material-design/dist/js/ripples.js"></script>
+  <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.js"></script>
 
   <script type="text/javascript" src="js/main.js"></script>
 
@@ -42,7 +52,7 @@
   <script type="text/javascript" src="js/controllers/CreateController.js"></script>
 
   <script>
-    $.material.init()
+    $.material.init();
   </script>
 </body>
 </html>
