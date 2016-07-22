@@ -52,8 +52,15 @@
     <div class="col-md-8">
 
       <h3>Contato:</h3>
-      <p>Tel: {{advertiser.phones.phone[0]}} / {{advertiser.phones.phone[1]}}</p>
-      <p>Cel: {{advertiser.phones.cel[0]}} / {{advertiser.phones.cel[1]}}</p>
+      <p>Tel: <span ng-repeat="phones in advertiser.phones">{{phones.phone.join(' / ')}}</span> </p>
+      <p>Cel: <span ng-repeat="phones in advertiser.phones">{{phones.cel.join(' / ')}}</span></p>
+
+      <h3>Outros contatos:</h3>
+      <ul class="list-inline">
+        <li class="col-md-4 col-xs-4 col-sm-4" ng-repeat="social in advertiser.social">
+          <a href="{{social.src}}"><img ng-src="img/{{social.icon}}" alt="{{social.icon}}"></a>
+        </li>
+      </ul>
 
       <hr>
 
@@ -61,13 +68,32 @@
 
       <div class="thumbnail row border-radius thumb-comentarios" ng-repeat="advComments in advertiser.comments">
         <div class="col-md-2 col-sm-2 col-xs-2">
-          <img src="img/user_default.jpg" class="img-responsive img-full-width" alt="">
+          <img src="img/user_default.png" class="img-responsive img-full-width" alt="">
         </div>
 
         <div class="col-md-10 col-sm-10 col-xs-10">
-          <h4>{{advComments.name}}</h4>
-          <p class="small">{{advComments.created.date}} às {{advComments.created.hours}}</p>
-          <p>{{advComments.comment}}</p>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nome">
+            </div>
+            <div class="form-group">
+              <label>Mensagem:</label>
+              <textarea class="form-control"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <h5><span class="badge">{{advertiser.comments.length}}</span> comentários</h5>
+        <div class="thumbnail row no-border" ng-repeat="advComments in advertiser.comments">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <img src="img/user_default.jpg" class="img-responsive img-full-width" alt="">
+          </div>
+
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <h4>{{advComments.name}}</h4>
+            <p class="small">{{advComments.created.date}} às {{advComments.created.hours}}</p>
+            <p>{{advComments.comment}}</p>
+          </div>
         </div>
       </div>
 

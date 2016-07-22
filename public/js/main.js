@@ -1,12 +1,17 @@
 angular.module('find-sampa', ['ngRoute','ngResource'])
   .config(function($routeProvider){
 
-    $routeProvider.when('/anunciantes', {
+    $routeProvider.when('/home', {
+      templateUrl: 'partials/client/home.html',
+      controller: 'HomeController'
+    })
+
+    $routeProvider.when('/:region/anunciantes', {
       templateUrl: 'partials/client/advertisers.html',
       controller: 'AdvertisersController'
     })
 
-    .when('/anunciantes/:advertiserId', {
+    .when('/:region/anunciantes/:categorie/:advertiserId', {
       templateUrl: 'partials/client/advertiser.html',
       controller: 'AdvertiserController'
     })
@@ -20,6 +25,6 @@ angular.module('find-sampa', ['ngRoute','ngResource'])
       controller: 'CreateController'
     })
 
-    .otherwise({redirectTo: '/anunciantes'});
+    .otherwise({redirectTo: '/home'});
 
   });

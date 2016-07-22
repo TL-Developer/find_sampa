@@ -5,15 +5,10 @@ angular.module('find-sampa')
 
   $scope.advertiser = [];
 
-  services.advertisersGetId($routeParams.advertiserId).query(function(advertiser){
+  $scope.routeParams = $routeParams;
+
+  services.advertisersGetId($routeParams.region, $routeParams.categorie, $routeParams.advertiserId).query(function(advertiser){
     $scope.advertiser = advertiser[0];
   });
-
-
-  $scope.advertisersRelation = [];
-  services.advertisersGet.query(function(advertisers){
-    $scope.advertisersRelation = $filter('filter')(advertisers, {category: $scope.advertiser.category});
-  });
-
 
 }]);

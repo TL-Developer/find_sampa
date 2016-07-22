@@ -1,10 +1,16 @@
-angular.module('find-sampa').factory('services', ['$resource','$routeParams', function($resource){
+angular.module('find-sampa').factory('services', ['$resource', function($resource){
+
+  var _getAdvetisers = function(regiao){
+    return $resource('/api/v1/' + regiao + '/anunciantes');
+  }
+
+  var _getAdvetisersId = function(regiao, categorie, id){
+    return $resource('/api/v1/' + regiao + '/anunciantes/' + categorie + '/' + id)
+  }
 
   return {
-    advertisersGet: $resource('/api/v1/anunciantes'),
-    advertisersGetId: function(id){
-      return $resource('/api/v1/anunciantes/' + id)
-    },
+    advertisersGet: _getAdvetisers,
+    advertisersGetId: _getAdvetisersId,
     categoriesGet: $resource('/api/v1/categories')
   }
 
