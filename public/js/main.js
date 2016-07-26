@@ -2,8 +2,7 @@ angular.module('find-sampa', ['ngRoute','ngResource'])
   .config(function($routeProvider){
 
     $routeProvider.when('/home', {
-      templateUrl: 'partials/client/home.html',
-      controller: 'HomeController'
+      templateUrl: 'partials/client/home.html'
     })
 
     $routeProvider.when('/:region/anunciantes', {
