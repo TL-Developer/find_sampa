@@ -106,6 +106,16 @@ ul.lista-galeria-imagens {
 .footer {
   background-color: #009688;
   color: rgba(255,255,255,.84);
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  input {
+    background: white !important;
+    padding: 10px !important;
+  }
 }
 
 
