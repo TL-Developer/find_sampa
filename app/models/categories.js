@@ -1,11 +1,26 @@
 var categories = [
   {
-    name: 'Mercados',
-    categorie: 'mercados'
-  },
-  {
-    name: 'Mecânicas',
-    categorie: 'mecanicas'
+    zleste: [
+      {
+        name: 'Mercados',
+        categorie: 'mercados'
+      },
+      {
+        name: 'Mecânicas',
+        categorie: 'mecanicas'
+      }
+    ],
+
+    zsul: [
+      {
+        name: 'Acadêmias',
+        categorie: 'academias'
+      },
+      {
+        name: 'Lojas de Roupas',
+        categorie: 'lojas'
+      }
+    ]
   }
 ];
 

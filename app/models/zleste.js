@@ -5,16 +5,18 @@ var zleste = [
         '_id': 0,
         'name': 'Mercado Porto Seguro',
         'path': 'mercado-porto-seguro',
-        'category': 'Mercados',
+        'category': 'mercados',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
-        'phones': {
-          'phone': [
-            '(11)2585-5588','(11)2585-5588'
-          ],
-          'cel': [
-            '(11)94656-5588','(11)94656-5588'
-          ]
-        },
+        'phones': [
+          {
+            'phone': [
+              '(11)2585-5588','(11)2585-5588'
+            ],
+            'cel': [
+              '(11)94656-5588','(11)94656-5588'
+            ]
+          }
+        ],
         'address': {
           'address': 'Rua professor alípio de barros',
           'number': '100',
@@ -84,16 +86,18 @@ var zleste = [
         '_id': 0,
         'name': 'Mecânica do José',
         'path': 'mercado-porto-seguro',
-        'category': 'Mecãnicas',
+        'category': 'mecanicas',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
-        'phones': {
-          'phone': [
-            '(11)2585-5588','(11)2585-5588'
-          ],
-          'cel': [
-            '(11)94656-5588','(11)94656-5588'
-          ]
-        },
+        'phones': [
+          {
+            'phone': [
+              '(11)2585-5588','(11)2585-5588'
+            ],
+            'cel': [
+              '(11)94656-5588','(11)94656-5588'
+            ]
+          }
+        ],
         'address': {
           'address': 'Rua professor alípio de barros',
           'number': '100',

@@ -9,6 +9,11 @@ angular.module('find-sampa')
   var listCategories = function(){
     services.categoriesGet().query(function(categories) {
       $scope.categories = categories;
+      console.log(categories)
+      for(var i = 0; i<categories.length; i++){
+        console.log(categories.length)
+        $scope.categories = categories[i];
+      }
     });
   };
   listCategories();

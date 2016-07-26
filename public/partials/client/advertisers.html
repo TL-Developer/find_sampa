@@ -44,13 +44,13 @@
     <div class="col-md-12" ng-repeat="adv in advertisers track by adv._id" ng-hide="loading">
       <div ng-repeat="(categorie, value) in adv" class="col-md-4">
         <div ng-repeat="advert in value">
-          <a href="/#/{{selectRegiao}}/anunciantes/{{categorie}}/{{advert._id}}">
+          <a href="/#/{{region}}/anunciantes/{{categorie}}/{{advert._id}}">
             <div class="thumbnail">
               <h3 class="text-center center">{{advert.name}}</h3>
               <img ng-src="img/advertisers/{{advert.path}}/{{advert.images.logo}}" class="img-responsive" alt="{{adv.name}}">
               <div class="caption">
                 <p>{{advert.address.address}}, {{advert.address.number}}</p>
-                <p>{{advert.phones.phone[0]}} / {{advert.phones.cel[0]}}</p>
+                <p>{{advert.phones[0].phone[0]}} / {{advert.phones[0].cel[0]}}</p>
                 <hr />
                 <p>Stars: {{advert.starts}}</p>
               </div>

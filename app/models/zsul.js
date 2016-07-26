@@ -86,16 +86,18 @@ var zsul = [
         '_id': 0,
         'name': 'Loja de roupas hello 10',
         'path': 'mercado-porto-seguro',
-        'category': 'mercado',
+        'category': 'lojas',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
-        'phones': {
-          'phone': [
-            '(11)2585-5588','(11)2585-5588'
-          ],
-          'cel': [
-            '(11)94656-5588','(11)94656-5588'
-          ]
-        },
+        'phones': [
+          {
+            'phone': [
+              '(11)2585-5588','(11)2585-5588'
+            ],
+            'cel': [
+              '(11)94656-5588','(11)94656-5588'
+            ]
+          }
+        ],
         'address': {
           'address': 'Rua professor alípio de barros',
           'number': '100',

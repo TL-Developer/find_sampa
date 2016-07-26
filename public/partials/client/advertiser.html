@@ -1,5 +1,9 @@
 <div class="row">
 
+  <div modal-popup-imagem>
+    <img ng-src="{{conteudoShowModal}}" alt="" class="img-responsive img-full-width border-radius">
+  </div>
+
   <div ng-include="'partials/client/includes/menu-toolbar.html'"></div>
 
   <div class="row banner-anunciante">
@@ -58,7 +62,7 @@
       <h3>Outros contatos:</h3>
       <ul class="list-inline">
         <li class="col-md-4 col-xs-4 col-sm-4" ng-repeat="social in advertiser.social">
-          <a href="{{social.src}}"><img ng-src="img/{{social.icon}}" alt="{{social.icon}}"></a>
+          {{social.icon}}<a href="{{social.src}}"><img ng-src="img/{{social.icon}}.png" alt="{{social.icon}}"></a>
         </li>
       </ul>
 
@@ -112,9 +116,9 @@
 
       <h3>Galeria de imagens:</h3>
       <ul class="list-inline lista-galeria-imagens">
-        <li class="col-md-4 col-xs-4 col-sm-4"><img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.galery[0]}}" alt="{{advertiser.images.galery[0]}}" class="img-responsive img-full-width border-radius"></li>
-        <li class="col-md-4 col-xs-4 col-sm-4"><img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.galery[0]}}" alt="{{advertiser.images.galery[0]}}" class="img-responsive img-full-width border-radius"></li>
-        <li class="col-md-4 col-xs-4 col-sm-4"><img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.galery[0]}}" alt="{{advertiser.images.galery[0]}}" class="img-responsive img-full-width border-radius"></li>
+        <li data-toggle='modal' data-target='#simple-dialog' ng-repeat="galery in advertiser.images.galery" class="col-md-4 col-xs-4 col-sm-4">
+          <img ng-click="showModalPopupImagem(advertiser.path, galery)" src="img/advertisers/{{advertiser.path}}/{{galery}}" alt="{{galery}}" class="img-responsive img-full-width border-radius"></li>
+        </li>
       </ul>
 
     </div>

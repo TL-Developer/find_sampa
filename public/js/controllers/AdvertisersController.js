@@ -5,12 +5,12 @@ angular.module('find-sampa')
 
   $scope.advertisers = [];
   $scope.mensagem = '';
-
   $scope.categories = [];
+  $scope.region = $routeParams.region;
 
   var listCategories = function(){
     services.categoriesGet().query(function(categories) {
-      $scope.categories = categories;
+      $scope.categories = categories[0][$routeParams.region];
     });
   };
   listCategories();
@@ -33,10 +33,11 @@ angular.module('find-sampa')
       services.advertisersGet($routeParams.region).query(function(advertisers){
         var advertisersCategorie = [];
 
-        advertisersCategorie.push({result: advertisers[0][categorie]});
+        advertisersCategorie.push({[categorie]: advertisers[0][categorie]});
 
         $scope.advertisers = advertisersCategorie;
         $scope.loading = '';
+        console.log(advertisers)
       });
     }else {
       getAdvertisers($routeParams.region);

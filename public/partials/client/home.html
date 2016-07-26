@@ -12,10 +12,10 @@
         <form>
 
           <div class="col-md-6">
-            <select class="form-control">
-                <option value=""></option>
-                <option value="mercados">Mercados</option>
+            <select class="form-control" ng-model="categorieSelected" ng-change="selectCategorie(categorieSelected)">
+              <option ng-repeat="(categorie, value) in categories" value="{{value}}">{{value}}</option>
             </select>
+            <span>{{categorieSelected}}</span>
           </div>
 
         </form>
@@ -49,7 +49,7 @@
                     <img ng-src="img/advertisers/{{ad.path}}/{{ad.images.logo}}" class="img-responsive" alt="{{adv.name}}">
                     <div class="caption">
                       <p>{{ad.address.address}}, {{ad.address.number}}</p>
-                      <p>{{ad.phones.phone[0]}} / {{ad.phones.cel[0]}}</p>
+                      <p>{{ad.phones[0].phone[0]}} / {{ad.phones[0].cel[0]}}</p>
                       <hr />
                       <p>Stars: {{ad.starts}}</p>
                     </div>

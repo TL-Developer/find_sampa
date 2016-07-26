@@ -20,4 +20,13 @@ angular.module('find-sampa')
     $scope.advertiser = advertiser[0];
   });
 
+
+  $scope.showModalPopupImagem = function(path,img) {
+
+    var imagem = 'img/advertisers/'+path+'/'+img;
+
+    $scope.conteudoShowModal = imagem;
+
+  };
+
 }]);
