@@ -1,183 +1,199 @@
-<div class="row">
-  <div class="container">
-    <form>
+<div class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
 
-      <div class="col-md-12">
-        <h3 class="text-center btn-success">Dados:</h3>
-      </div>
+      <div ng-include="'partials/server/includes/header.html'"></div>
+      <div ng-include="'partials/server/includes/left-menu.html'"></div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" placeholder="Anunciante" class="form-control">
-        </div>
-      </div>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <select name="" id="" class="form-control">
-            <option value="">Escolha a categoria</option>
-            <option value="" ng-repeat="categorie in categories | orderBy: name">{{categorie}}</option>
-          </select>
-        </div>
-      </div>
+          <div class="row">
+            <div class="container">
+              <form>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="password" placeholder="Descrição" class="form-control">
-        </div>
-      </div>
+                <div class="col-md-12">
+                  <h3 class="text-center btn-success">Dados:</h3>
+                </div>
 
-      <div class="form-group">
-        <div class="col-md-10">
-          <input type="password" placeholder="Telefones" class="form-control">
-        </div>
-        <div class="col-md-2">
-          <button type="button" class="btn-default btn-block"><h4>add</h4></button>
-        </div>
-        <div class="col-md-12">
-          <ul>
-            <li> <button type="button" class="btn-danger">excluir</button></li>
-          </ul>
-        </div>
-      </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" placeholder="Anunciante" class="form-control">
+                  </div>
+                </div>
 
-      <div class="col-md-12">
-        <h3 class="text-center btn-success">Endereço:</h3>
-      </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select name="" id="" class="form-control">
+                      <option value="">Escolha a categoria</option>
+                      <option value="" ng-repeat="categorie in categories | orderBy: name">{{categorie}}</option>
+                    </select>
+                  </div>
+                </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Lagrodouro">
-        </div>
-      </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="password" placeholder="Descrição" class="form-control">
+                  </div>
+                </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Número">
-        </div>
-      </div>
+                <div class="form-group">
+                  <div class="col-md-10">
+                    <input type="password" placeholder="Telefones" class="form-control">
+                  </div>
+                  <div class="col-md-2">
+                    <button type="button" class="btn-default btn-block"><h4>add</h4></button>
+                  </div>
+                  <div class="col-md-12">
+                    <ul>
+                      <li> <button type="button" class="btn-danger">excluir</button></li>
+                    </ul>
+                  </div>
+                </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Bairro">
-        </div>
-      </div>
+                <div class="col-md-12">
+                  <h3 class="text-center btn-success">Endereço:</h3>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Lagrodouro">
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Número">
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Bairro">
+                  </div>
+                </div>
 
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <select name="" id="" class="form-control">
-            <option value="">Qual região</option>
-            <option value="">Zona Leste</option>
-            <option value="">Zona Norte</option>
-            <option value="">Zona Oeste</option>
-            <option value="">Zona Sul</option>
-          </select>
-        </div>
-      </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select name="" id="" class="form-control">
+                      <option value="">Qual região</option>
+                      <option value="">Zona Leste</option>
+                      <option value="">Zona Norte</option>
+                      <option value="">Zona Oeste</option>
+                      <option value="">Zona Sul</option>
+                    </select>
+                  </div>
+                </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Latitude">
-        </div>
-      </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Latitude">
+                  </div>
+                </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Longitude">
-        </div>
-      </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Longitude">
+                  </div>
+                </div>
 
-        <div class="col-md-12">
-          <h3 class="text-center btn-success">Social:</h3>
-        </div>
+                  <div class="col-md-12">
+                    <h3 class="text-center btn-success">Social:</h3>
+                  </div>
 
-        <div class="form-group">
+                  <div class="form-group">
 
-          <div class="col-md-10">
-            <input type="password" placeholder="Adicione um social" class="form-control">
+                    <div class="col-md-10">
+                      <input type="password" placeholder="Adicione um social" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                      <button type="button" class="btn-default btn-block"><h4>add</h4></button>
+                    </div>
+                    <div class="col-md-12">
+                      <ul>
+                        <li> <button type="button" class="btn-danger">excluir</button></li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-12">
+                    <h3 class="text-center btn-success">Horário de funcionamento:</h3>
+                  </div>
+
+                  <div class="form-group">
+
+                    <div class="col-md-10">
+                      <input type="password" placeholder="Adicione um horário" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                      <button type="button" class="btn-default btn-block"><h4>add</h4></button>
+                    </div>
+                    <div class="col-md-12">
+                      <ul>
+                        <li> <button type="button" class="btn-danger">excluir</button></li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-12">
+                    <h3 class="text-center btn-success">Imagens:</h3>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input type="text" placeholder="Adicione para o logo" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <button type="button" class="btn-default btn-block"><h5>Upload</h5></button>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input type="text" placeholder="Adicione para o banner" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <button type="button" class="btn-default btn-block"><h5>Upload</h5></button>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-10">
+                      <input type="text" placeholder="Adicione imagens para galeria" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                      <button type="button" class="btn-default btn-block"><h4>add</h4></button>
+                    </div>
+                    <div class="col-md-12">
+                      <ul>
+                        <li> <button type="button" class="btn-danger">excluir</button></li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-6">
+                    <a href="/"><button type="button" class="btn-default btn-block"><h5>Voltar</h5></button></a>
+                  </div>
+
+                  <div class="col-md-6">
+                    <button type="submit" class="btn-primary btn-block"><h5>Salvar</h5></button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="col-md-2">
-            <button type="button" class="btn-default btn-block"><h4>add</h4></button>
-          </div>
-          <div class="col-md-12">
-            <ul>
-              <li> <button type="button" class="btn-danger">excluir</button></li>
-            </ul>
-          </div>
 
-        </div>
-
-        <div class="col-md-12">
-          <h3 class="text-center btn-success">Horário de funcionamento:</h3>
-        </div>
-
-        <div class="form-group">
-
-          <div class="col-md-10">
-            <input type="password" placeholder="Adicione um horário" class="form-control">
-          </div>
-          <div class="col-md-2">
-            <button type="button" class="btn-default btn-block"><h4>add</h4></button>
-          </div>
-          <div class="col-md-12">
-            <ul>
-              <li> <button type="button" class="btn-danger">excluir</button></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="col-md-12">
-          <h3 class="text-center btn-success">Imagens:</h3>
-        </div>
-
-
-        <div class="col-md-4">
-          <div class="form-group">
-            <input type="text" placeholder="Adicione para o logo" class="form-control">
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <button type="button" class="btn-default btn-block"><h5>Upload</h5></button>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="form-group">
-            <input type="text" placeholder="Adicione para o banner" class="form-control">
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <button type="button" class="btn-default btn-block"><h5>Upload</h5></button>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-md-10">
-            <input type="text" placeholder="Adicione imagens para galeria" class="form-control">
-          </div>
-          <div class="col-md-2">
-            <button type="button" class="btn-default btn-block"><h4>add</h4></button>
-          </div>
-          <div class="col-md-12">
-            <ul>
-              <li> <button type="button" class="btn-danger">excluir</button></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="col-md-6">
-          <a href="/"><button type="button" class="btn-default btn-block"><h5>Voltar</h5></button></a>
-        </div>
-
-        <div class="col-md-6">
-          <button type="submit" class="btn-primary btn-block"><h5>Salvar</h5></button>
-        </div>
+        </section>
       </div>
-    </form>
-  </div>
+    </div><!-- ./wrapper -->
 </div>

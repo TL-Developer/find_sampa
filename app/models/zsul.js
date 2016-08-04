@@ -71,7 +71,7 @@ var zsul = [
             }
           }
         ],
-        'starts': 10,
+        'stars': 10,
         'created': {
           'date':'15/07/2016',
           'hours': '11:48'
@@ -152,7 +152,7 @@ var zsul = [
             }
           }
         ],
-        'starts': 10,
+        'stars': 10,
         'created': {
           'date':'15/07/2016',
           'hours': '11:48'

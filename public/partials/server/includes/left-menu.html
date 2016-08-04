@@ -1,0 +1,32 @@
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="" class="img-circle" alt="User Image">
+      </div>
+      <div class="pull-left info">
+        <p>Olá, </p>
+        <!-- Status -->
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu">
+      <li class="header">MENU</li>
+      <!-- Optionally, you can add icons to the links -->
+      <li><a href="#/dashboard/create"><i class="glyphicon glyphicon-heart"></i> <span>Cadastrar anunciante<span class="label label-primary pull-right">{{imoveis.length}}</span></span></a></li>
+      <li><a href="#/admin"><i class="glyphicon glyphicon-heart"></i> <span>Todos anunciantes<span class="label label-primary pull-right">{{imoveis.length}}</span></span></a></li>
+       <li ng-show="todosImoveisShow"><a href="#/admin/imoveis"><i class="fa fa-bank"></i> <span>Todos imóveis <span class="label pull-right bg-red">{{todosImoveis.length}}</span></span></a></li>
+      <li ng-show="todosUsuariosShow"><a href="/#/admin/usuarios"><i class="fa fa-user"></i> <span>Usuarios cadastrados </span> <span class="label pull-right bg-red">{{usuarios.length}}</span></a></li>
+      <li><a href="#/admin/caixaentrada/{{usuario._id}}"><i class="glyphicon glyphicon-envelope"></i> <span>Caixa de entrada </span><span class="label pull-right bg-yellow">{{mensagensLength}}</span></a></li>
+      <li><a href="#/admin/usuarios/{{usuario._id}}"><i class="glyphicon glyphicon-cog"></i> <span>Gerenciar Perfil</span></a></li>
+      <li><a href="#/admin/chatonline/{{usuario._id}}"><i class="glyphicon glyphicon-cloud"></i> <span>Chat Online</span></a></li>
+
+    </ul><!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>

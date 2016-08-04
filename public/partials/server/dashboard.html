@@ -1,0 +1,161 @@
+<div class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+      <div ng-include="'partials/server/includes/header.html'"></div>
+      <div ng-include="'partials/server/includes/left-menu.html'"></div>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+
+          <div class="row">
+             <div class="col-md-12">
+                <a href="/#/dashboard/create" class="btn btn-default">Cadastrar anunciante</a>
+                 <hr />
+              </div>
+            </div>
+
+
+            <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="info-box">
+                <span class="info-box-icon bg-aqua"><i class="fa fa-envelope-o"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Anunciantes</span>
+                  <span class="info-box-number">1,410</span>
+                </div><!-- /.info-box-content -->
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="info-box">
+                <span class="info-box-icon bg-red"><i class="ion ion-ios-people-outline"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Categorias</span>
+                  <span class="info-box-number">2,000</span>
+                </div><!-- /.info-box-content -->
+              </div><!-- /.info-box -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="info-box">
+                <span class="info-box-icon bg-yellow"><i class="ion ion-ios-cart-outline"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Regiões</span>
+                  <span class="info-box-number">760</span>
+                </div><!-- /.info-box-content -->
+              </div><!-- /.info-box -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="info-box">
+                <span class="info-box-icon bg-green"><i class="fa fa-files-o"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Bairros</span>
+                  <span class="info-box-number">13,648</span>
+                </div><!-- /.info-box-content -->
+              </div><!-- /.info-box -->
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row box box-default">
+              <div class="box-header with-border">
+                <i class="fa fa-bank"></i>
+                <h3 class="box-title">
+                    Anunciantes cadastrados <span class="badge bg-green">{{imoveis.length}}</span>
+                    <p class="text-info" ng-hide="imoveis.length">Não há anunciantes cadastrados</p>
+                </h3>
+              </div>
+
+              <br />
+
+
+            <div class="row">
+
+            <div class="col-md-4 painel-animado" ng-repeat="imovel in imoveis | filter: filtro">
+
+              <!-- Box Comment -->
+              <div class="box box-widget">
+                <div class="box-header with-border">
+                  <div class="user-block">
+                    <img class="img-circle" src="img/usuarios/{{imovel.usernameImagem}}" alt="Usuario">
+                    <span class="username">{{imovel.username}}</span>
+                    <span class="description">publicado - {{imovel.created}}</span>
+                  </div><!-- /.user-block -->
+                  <div class="box-tools">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body" style="display: block;">
+                  <h3 class="text-center text-info">{{imovel.nome}}</h3>
+
+                  <div data-ride="carousel" class="carousel slide" id="carousel-example-captions">
+
+                    <div role="listbox" class="carousel-inner carouselImagens">
+                      <div class="item active">
+                        <img ng-src="img/imoveis/{{imovel.imagem[0]}}" alt="">
+                      </div>
+
+                      <div class="item carouselImagens" ng-repeat="img in imovel.imagem.slice(1) track by $index">
+                        <img ng-src="img/imoveis/{{img}}" alt="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="pull-right text-muted">{{imovel.curtidas}} curtidas - {{imovel.caixaentrada.length}} mensagens</span>
+                </div><!-- /.box-body -->
+
+                <div class="box-footer" style="display: block;">
+                  <a ng-href="#/imovel/{{imovel._id}}" class="btn btn-default btn-block" role="button"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar imóvel</a><br />
+                  <a ng-href="#/galeriaImovel/{{imovel._id}}" class="btn btn-default btn-block" role="button"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Gerenciar galeria <span class="label label-success">{{imovel.imagem.length - 1}}</a>
+                  <a href="" class="btn btn-danger btn-block" role="button" ng-click="remove(imovel)"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Excluir imóvel</a>
+                </div><!-- /.box-footer -->
+
+
+                <div class="box-footer box-comments" style="display: block;">
+
+                  <div class="box box-primary collapsed-box">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Mensagens <span class="badge bg-yellow">{{imovel.caixaentrada.length}}</span></h3>
+                      <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body" style="display: none;">
+                      <div class="box-comment" ng-repeat="mensagens in imovel.caixaentrada">
+                          <!-- User image -->
+                          <img class="img-circle img-sm" src="img/usuarios/user_default.png" alt="Usuario">
+                          <div class="comment-text">
+                            <span class="username">
+                              {{mensagens.nome}}
+                              <span class="text-muted pull-right">{{mensagens.created}}</span>
+                            </span><!-- /.username -->
+                            {{mensagens.mensagem}}
+                          </div><!-- /.comment-text -->
+                        </div><!-- /.box-comment -->
+                    </div><!-- /.box-body -->
+                </div>
+
+                </div><!-- /.box-footer -->
+
+              </div><!-- /.box -->
+
+
+            </div><!-- /.col -->
+          </div>
+
+
+
+            </div>
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+
+    </div><!-- ./wrapper -->
+</div>

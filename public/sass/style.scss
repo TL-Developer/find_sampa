@@ -2,6 +2,10 @@
   border-radius: 10px;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .sem-margin {
   margin: 0;
   padding: 0;
@@ -116,6 +120,13 @@ ul.lista-galeria-imagens {
     background: white !important;
     padding: 10px !important;
   }
+
+  ul.footerRegiao {
+
+    li {
+      float: left;
+    }
+  }
 }
 
 
@@ -130,6 +141,46 @@ ul.lista-galeria-imagens {
   transition: all 1s ease;
 }
 
+
+.loading {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  background: none rgba(255,255,255,0.8);
+
+
+  .spinner2 {
+    width: auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+
+
+    div {
+      width: 18px;
+      height: 18px;
+      background-color: #333;
+
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+
+    .bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+
+    .bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+  }
+}
 
 .spinner {
   margin: 100px auto 0;
@@ -170,5 +221,19 @@ ul.lista-galeria-imagens {
   } 40% {
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
+  }
+}
+
+
+ul.stars {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: yellow;
   }
 }

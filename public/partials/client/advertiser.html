@@ -1,3 +1,11 @@
+<div class="info col-md-12 loading" ng-show="loading2">
+  <div class="spinner2">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div>
+
 <div class="row">
 
   <div modal-popup-imagem>
@@ -31,7 +39,8 @@
 
       <div class="col-md-8 sem-margin">
         <div class="mapa-anunciante">
-          MAPA COM LAT E LONG
+          LATITUDE - {{advertiser.address.coordinates.latitude}}
+          LONGITUDE - {{advertiser.address.coordinates.longitude}}
         </div>
       </div>
 
@@ -128,8 +137,15 @@
     <div class="col-md-12">
 
       <h3>Anunciantes relacionados:</h3>
+      <h2 class="info" ng-hide="loading">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </h2>
       <div class="col-md-3" ng-repeat="advRelation in advertisersRelation track by advRelation._id">
-        <a href="/#/anunciantes/{{advRelation._id}}">
+        <a href="/#/{{region}}/anunciantes/{{categorie}}/{{advRelation._id}}">
           <div class="thumbnail">
             <h4 class="text-center center">{{advRelation.name}}</h4>
             <img src="img/advertisers/{{advRelation.path}}/galery_1.jpg" class="img-responsive" alt="{{advertisersRelation.name}}">

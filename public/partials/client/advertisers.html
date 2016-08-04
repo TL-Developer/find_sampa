@@ -30,7 +30,7 @@
     <img src="img/banner.jpg" class="img-responsive img-full-width img-banner" alt="">
   </div>
 
-  <div class="container">
+  <div class="container" id="content">
 
     <h2 class="info" ng-show="loading">
       <div class="spinner">
@@ -52,8 +52,8 @@
                 <p>{{advert.address.address}}, {{advert.address.number}}</p>
                 <p>{{advert.phones[0].phone[0]}} / {{advert.phones[0].cel[0]}}</p>
                 <hr />
-                <p>Stars: {{advert.starts}}</p>
-              </div>
+                <small>{{advert.description | limitTo: 100}}...</small>
+                </div>
             </div>
           </a>
         </div>
