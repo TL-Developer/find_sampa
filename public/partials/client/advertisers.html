@@ -44,7 +44,7 @@
     <div class="col-md-12" ng-repeat="adv in advertisers track by adv._id" ng-hide="loading">
       <div ng-repeat="(categorie, value) in adv" class="col-md-4">
         <div ng-repeat="advert in value">
-          <a href="/#/{{region}}/anunciantes/{{categorie}}/{{advert._id}}">
+          <a ui-sref="viewAdvertiser({region: region, categorie: categorie, id: advert._id})">
             <div class="thumbnail">
               <h3 class="text-center center">{{advert.name}}</h3>
               <img ng-src="img/advertisers/{{advert.path}}/{{advert.images.logo}}" class="img-responsive" alt="{{adv.name}}">

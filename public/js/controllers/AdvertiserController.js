@@ -1,15 +1,15 @@
 angular.module('find-sampa')
   .controller('AdvertiserController',
-      ['$scope','services','$filter','$routeParams',
-        function($scope, services, $filter, $routeParams){
+      ['$scope','services','$filter','$stateParams',
+        function($scope, services, $filter, $stateParams){
 
   $scope.advertiser = [];
 
-  $scope.routeParams = $routeParams;
+  $scope.routeParams = $stateParams;
 
   $scope.categories = [];
-  $scope.region = $routeParams.region;
-  $scope.categorie = $routeParams.categorie;
+  $scope.region = $stateParams.region;
+  $scope.categorie = $stateParams.categorie;
 
   var listCategories = function(){
     services.categoriesGet().query(function(categories) {
@@ -18,9 +18,8 @@ angular.module('find-sampa')
   };
   listCategories();
 
-
   $scope.loading2 = 'show';
-  services.advertisersGetId($routeParams.region, $routeParams.categorie, $routeParams.advertiserId).query(function(advertiser){
+  services.advertisersGetId($stateParams.region, $stateParams.categorie, $stateParams.id).query(function(advertiser){
     $scope.advertiser = advertiser[0];
     $scope.loading2 = '';
   });
@@ -32,8 +31,8 @@ angular.module('find-sampa')
   };
 
   $scope.advertisersRelation = [];
-  services.advertisersGet($routeParams.region).query(function(advertisers){
-    $scope.advertisersRelation = advertisers[0][$routeParams.categorie];
+  services.advertisersGet($stateParams.region).query(function(advertisers){
+    $scope.advertisersRelation = advertisers[0][$stateParams.categorie];
     $scope.loading = 'ok';
   });
 
