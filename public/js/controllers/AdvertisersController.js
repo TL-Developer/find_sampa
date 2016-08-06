@@ -17,13 +17,28 @@
     listCategories();
 
     $scope.selectRegiao = $stateParams.region;
+
     var teste = [];
-    var teste2 = [];
+
     var getAdvertisers = function(regiao){
       $scope.loading = 'loading';
       services.advertisersGet(regiao).query(function(advertisers){
-        $scope.advertisers = advertisers;
-        $scope.loading = '';
+
+        for(var cat in advertisers[0]){
+          if(typeof advertisers[0][cat] == 'object'){
+            teste.push(advertisers[0][cat]);
+          }
+        }
+
+        for(var i = 0; i < teste.length; i++){
+          for(var j = 0; j < teste[i].length; j++) {
+            $scope.advertisers.push(teste[i][j]);
+            $scope.loading = '';
+          }
+        }
+
+
+
       });
     };
     getAdvertisers($stateParams.region);
@@ -33,13 +48,8 @@
 
       if(categorie){
         services.advertisersGet($stateParams.region).query(function(advertisers){
-          var advertisersCategorie = [];
-
-          advertisersCategorie.push({[categorie]: advertisers[0][categorie]});
-
-          $scope.advertisers = advertisersCategorie;
+          $scope.advertisers = advertisers[0][categorie];
           $scope.loading = '';
-          console.log(advertisers)
         });
       }else {
         getAdvertisers($stateParams.region);
@@ -72,22 +82,5 @@
         }, 3000);
       });
     };
-
-
-    $scope.mensagemLogin = {
-      erro: ''
-    };
-
-    $scope.acessarAdmin = function(form) {
-
-      if(form.login == 'tiago' && form.senha == 'admin'){
-        $state.go('/dashboard');
-      }else {
-        $scope.mensagemLogin.erro = 'Login e senha inválidos';
-        $timeout(function(){
-          $scope.mensagemLogin.erro = '';
-        }, 3000);
-      }
-    }
 
   }]);

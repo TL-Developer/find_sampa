@@ -8,6 +8,10 @@ var categories = [
       {
         name: 'Mecânicas',
         categorie: 'mecanicas'
+      },
+      {
+        name: 'Pizzarias',
+        categorie: 'pizzarias'
       }
     ],
 

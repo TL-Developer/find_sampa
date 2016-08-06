@@ -18,7 +18,7 @@
     <ul class="sidebar-menu">
       <li class="header">MENU</li>
       <!-- Optionally, you can add icons to the links -->
-      <li><a href="#/dashboard/create"><i class="glyphicon glyphicon-heart"></i> <span>Cadastrar anunciante<span class="label label-primary pull-right">{{imoveis.length}}</span></span></a></li>
+      <li><a ui-sref="newAdvertiser"><i class="glyphicon glyphicon-heart"></i> <span>Cadastrar anunciante<span class="label label-primary pull-right">{{imoveis.length}}</span></span></a></li>
       <li><a href="#/admin"><i class="glyphicon glyphicon-heart"></i> <span>Todos anunciantes<span class="label label-primary pull-right">{{imoveis.length}}</span></span></a></li>
        <li ng-show="todosImoveisShow"><a href="#/admin/imoveis"><i class="fa fa-bank"></i> <span>Todos imóveis <span class="label pull-right bg-red">{{todosImoveis.length}}</span></span></a></li>
       <li ng-show="todosUsuariosShow"><a href="/#/admin/usuarios"><i class="fa fa-user"></i> <span>Usuarios cadastrados </span> <span class="label pull-right bg-red">{{usuarios.length}}</span></a></li>

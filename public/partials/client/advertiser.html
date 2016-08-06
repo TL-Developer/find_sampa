@@ -145,7 +145,7 @@
         </div>
       </h2>
       <div class="col-md-3" ng-repeat="advRelation in advertisersRelation track by advRelation._id">
-        <a href="/#/{{region}}/anunciantes/{{categorie}}/{{advRelation._id}}">
+        <a ui-sref="viewAdvertiser({region: region, categorie: categorie, id: advRelation._id})">
           <div class="thumbnail">
             <h4 class="text-center center">{{advRelation.name}}</h4>
             <img src="img/advertisers/{{advRelation.path}}/galery_1.jpg" class="img-responsive" alt="{{advertisersRelation.name}}">

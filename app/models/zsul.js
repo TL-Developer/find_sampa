@@ -5,7 +5,7 @@ var zsul = [
         '_id': 0,
         'name': 'World Top Fitness',
         'path': 'mercado-porto-seguro',
-        'category': 'mercados',
+        'category': 'academias',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': [
           {

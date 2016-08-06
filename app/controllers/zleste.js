@@ -4,11 +4,7 @@ module.exports = function(app){
     , zlesteModel = app.models.zleste;
 
   controller.getAdvertisers = function(req, res) {
-
-    setTimeout(function(){
-      res.json(zlesteModel);
-    },1000);
-
+     res.json(zlesteModel);
   };
 
   controller.getAdvertisersId = function(req, res) {

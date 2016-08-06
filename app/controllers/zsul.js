@@ -4,11 +4,7 @@ module.exports = function(app){
     , zsulModel = app.models.zsul;
 
   controller.getAdvertisers = function(req, res) {
-
-    setTimeout(function(){
-      res.json(zsulModel);
-    },1000);
-
+    res.json(zsulModel);
   };
 
   controller.getAdvertisersId = function(req, res) {
