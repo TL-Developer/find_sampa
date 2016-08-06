@@ -3,8 +3,6 @@
       ['$scope','services','$stateParams','$http','$timeout','$state',
       function($scope, services, $stateParams, $http, $timeout, $state){
 
-
-    $scope.advertisers = [];
     $scope.mensagem = '';
     $scope.categories = [];
     $scope.region = $stateParams.region;
@@ -18,27 +16,27 @@
 
     $scope.selectRegiao = $stateParams.region;
 
-    var teste = [];
 
     var getAdvertisers = function(regiao){
+
+      $scope.advertisers = [];
+      var anunciantes = [];
+
       $scope.loading = 'loading';
       services.advertisersGet(regiao).query(function(advertisers){
 
         for(var cat in advertisers[0]){
           if(typeof advertisers[0][cat] == 'object'){
-            teste.push(advertisers[0][cat]);
+            anunciantes.push(advertisers[0][cat]);
           }
         }
 
-        for(var i = 0; i < teste.length; i++){
-          for(var j = 0; j < teste[i].length; j++) {
-            $scope.advertisers.push(teste[i][j]);
+        for(var i = 0; i < anunciantes.length; i++){
+          for(var j = 0; j < anunciantes[i].length; j++) {
+            $scope.advertisers.push(anunciantes[i][j]);
             $scope.loading = '';
           }
         }
-
-
-
       });
     };
     getAdvertisers($stateParams.region);

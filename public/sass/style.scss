@@ -40,11 +40,11 @@ hr {
 /* BANNER PRINCIPAL */
 .banner-principal {
   position: relative;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
 
   .img-banner {
-    margin-top: -300px;
+    margin-top: -200px;
   }
 
   .info-adv {
@@ -64,7 +64,6 @@ hr {
 /* BANNER ANUNCIANTE */
 .banner-anunciante {
   position: relative;
-  height: 300px;
   overflow: hidden;
 
   .info-adv {
@@ -81,7 +80,7 @@ hr {
   }
 
   .img-banner {
-    margin-top: 0;
+    height: 100%;
   }
 }
 
