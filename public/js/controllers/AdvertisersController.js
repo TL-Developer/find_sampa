@@ -6,6 +6,12 @@
     $scope.mensagem = '';
     $scope.categories = [];
     $scope.region = $stateParams.region;
+    $scope.limitAdvertisers = 9;
+
+    $scope.carregaMais = function(){
+      $scope.limitAdvertisers+=3;
+    };
+
 
     var listCategories = function(){
       services.categoriesGet().query(function(categories) {
@@ -52,33 +58,6 @@
       }else {
         getAdvertisers($stateParams.region);
       }
-    };
-
-
-    $scope.search = function(form) {
-      var query = {
-        regiao: $stateParams.region,
-        query: form.anunciante
-      }
-
-      $scope.loading = 'loading';
-
-      $http.post('/search', query).then(function(data) {
-        var response = [
-          {
-            [form.anunciante]: data.data
-          }
-        ];
-
-        $scope.advertisers = response;
-        $scope.loading = '';
-      }, function(err){
-        $scope.mensagem = 'Não temos essa categoria cadastra :(';
-        $timeout(function(){
-          $scope.mensagem = '';
-          $scope.loading = '';
-        }, 3000);
-      });
     };
 
   }]);

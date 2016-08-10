@@ -42,14 +42,14 @@
         </div>
       </h2>
 
-      <hr>
-      <h3 class="center text-center" ng-hide="loading">Empresas anunciantes em destaque:</h3>
-      <hr>
-      <div class="col-md-4" ng-repeat="advert in advertisers" ng-hide="loading">
+      <hr ng-hide="loading">
+        <h3 class="center text-center" ng-hide="loading">Empresas anunciantes nesta região:</h3>
+      <hr ng-hide="loading">
+      <div class="col-md-4" ng-repeat="advert in advertisers | limitTo: limitAdvertisers" ng-hide="loading">
         <a ui-sref="viewAdvertiser({region: region, categorie: advert.category, id: advert._id})">
           <div class="thumbnail">
             <h3 class="text-center center">{{advert.name}}</h3>
-            <img ng-src="img/advertisers/{{advert.path}}/{{advert.images.logo}}" class="img-responsive" alt="{{adv.name}}">
+            <img ng-src="img/advertisers/{{advert.images.path}}/{{advert.images.logo}}" class="img-responsive" alt="{{adv.name}}">
             <div class="caption">
               <p>{{advert.address.address}}, {{advert.address.number}}</p>
               <p>{{advert.phones[0].phone[0]}} / {{advert.phones[0].cel[0]}}</p>
@@ -60,7 +60,15 @@
         </a>
       </div>
 
+      <div class="row" ng-show="advertisers.length > limitAdvertisers">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-raised btn-info text-center" ng-click="carregaMais()">Carregar mais...</button>
+        </div>
+      </div>
+
     </div>
+
+
 
   </div>
 

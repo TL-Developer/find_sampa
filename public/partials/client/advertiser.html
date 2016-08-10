@@ -27,7 +27,7 @@
 
     </div>
 
-    <img src="img/advertisers/{{advertiser.path}}/{{advertiser.images.banner}}" class="img-responsive img-full-width img-banner" alt="{{advertiser.name}}">
+    <img src="img/advertisers/{{advertiser.images.path}}/{{advertiser.images.banner}}" class="img-responsive img-full-width img-banner" alt="{{advertiser.name}}">
   </div>
 
   <div class="container">
@@ -55,7 +55,7 @@
             <input type="text" class="form-control" placeholder="Destino">
           </div>
 
-          <button type="submit" class="btn-primary btn-raised">CRIAR ROTA</button>
+          <button type="submit" class="btn btn-raised btn-info">CRIAR ROTA</button>
         </form>
       </div>
 
@@ -68,10 +68,9 @@
       <p>Tel: <span ng-repeat="phones in advertiser.phones">{{phones.phone.join(' / ')}}</span> </p>
       <p>Cel: <span ng-repeat="phones in advertiser.phones">{{phones.cel.join(' / ')}}</span></p>
 
-      <h3>Outros contatos:</h3>
-      <ul class="list-inline">
+      <ul class="list-inline contatos-social">
         <li class="col-md-4 col-xs-4 col-sm-4" ng-repeat="social in advertiser.social">
-          {{social.icon}}<a href="{{social.src}}"><img ng-src="img/{{social.icon}}.png" alt="{{social.icon}}"></a>
+          <a href="{{social.src}}"><i class="fa fa-{{social.icon}} fa-2x"></i></a>
         </li>
       </ul>
 
@@ -126,7 +125,7 @@
       <h3>Galeria de imagens:</h3>
       <ul class="list-inline lista-galeria-imagens">
         <li data-toggle='modal' data-target='#simple-dialog' ng-repeat="galery in advertiser.images.galery" class="col-md-4 col-xs-4 col-sm-4">
-          <img ng-click="showModalPopupImagem(advertiser.path, galery)" src="img/advertisers/{{advertiser.path}}/{{galery}}" alt="{{galery}}" class="img-responsive img-full-width border-radius"></li>
+          <img ng-click="showModalPopupImagem(advertiser.images.path, galery)" src="img/advertisers/{{advertiser.images.path}}/{{galery}}" alt="{{galery}}" class="img-responsive img-full-width border-radius"></li>
         </li>
       </ul>
 
@@ -148,7 +147,7 @@
         <a ui-sref="viewAdvertiser({region: region, categorie: categorie, id: advRelation._id})">
           <div class="thumbnail">
             <h4 class="text-center center">{{advRelation.name}}</h4>
-            <img src="img/advertisers/{{advRelation.path}}/galery_1.jpg" class="img-responsive" alt="{{advertisersRelation.name}}">
+            <img src="img/advertisers/{{advRelation.images.path}}/galery_1.jpg" class="img-responsive" alt="{{advertisersRelation.name}}">
           </div>
         </a>
       </div>

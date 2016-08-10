@@ -4,7 +4,6 @@ var zleste = [
       {
         '_id': 0,
         'name': 'Mercado Porto Seguro',
-        'path': 'mercado-porto-seguro',
         'category': 'mercados',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': [
@@ -53,6 +52,7 @@ var zleste = [
           }
         ],
         'images': {
+          'path': 'mercado-porto-seguro',
           'logo':'logo.jpg',
           'banner': 'banner.jpg',
           'galery': [
@@ -85,7 +85,6 @@ var zleste = [
       {
         '_id': 0,
         'name': 'Mecânica do José',
-        'path': 'mercado-porto-seguro',
         'category': 'mecanicas',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': [
@@ -134,6 +133,7 @@ var zleste = [
           }
         ],
         'images': {
+          'path': 'mercado-porto-seguro',
           'logo':'logo.jpg',
           'banner': 'banner.jpg',
           'galery': [
@@ -164,7 +164,6 @@ var zleste = [
       {
         '_id': 1,
         'name': 'Mecânica do Alberto',
-        'path': 'mercado-porto-seguro',
         'category': 'mecanicas',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': [
@@ -213,6 +212,7 @@ var zleste = [
           }
         ],
         'images': {
+          'path': 'mercado-porto-seguro',
           'logo':'logo.jpg',
           'banner': 'banner.jpg',
           'galery': [
@@ -245,7 +245,6 @@ var zleste = [
       {
         '_id': 0,
         'name': 'Nápoles Pizzaria',
-        'path': 'mercado-porto-seguro',
         'category': 'pizzarias',
         'description': 'A melhor pizzaria do bairro ;)',
         'phones': [
@@ -294,6 +293,7 @@ var zleste = [
           }
         ],
         'images': {
+          'path': 'mercado-porto-seguro',
           'logo':'logo.jpg',
           'banner': 'banner.jpg',
           'galery': [
@@ -324,7 +324,6 @@ var zleste = [
       {
         '_id': 1,
         'name': 'Pizzaria Fran',
-        'path': 'mercado-porto-seguro',
         'category': 'pizzarias',
         'description': 'Temos todos tipos de pizzas, beirutes e porções.',
         'phones': [
@@ -373,6 +372,7 @@ var zleste = [
           }
         ],
         'images': {
+          'path': 'mercado-porto-seguro',
           'logo':'logo.jpg',
           'banner': 'banner.jpg',
           'galery': [

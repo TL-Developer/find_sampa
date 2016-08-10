@@ -1,7 +1,7 @@
 angular.module('find-sampa')
   .controller('MenuCtrl',
-      ['$scope','$state'
-      , function($scope, $state){
+      ['$scope','$state','$stateParams','$http'
+      , function($scope, $state, $stateParams, $http){
 
 
   $scope.mensagemLogin = {
@@ -18,7 +18,39 @@ angular.module('find-sampa')
         $scope.mensagemLogin.erro = '';
       }, 3000);
     }
-  }
+  };
+
+  $scope.search = function(form) {
+    var query = {
+      regiao: $stateParams.region,
+      query: form.anunciante
+    }
+
+    console.log(query)
+
+    $scope.loading = 'loading';
+
+    $http.post('/search', query).then(function(data){
+      console.log(data);
+    });
+
+    //$http.post('/search', query).then(function(data) {
+    //  var response = [
+    //    {
+    //      [form.anunciante]: data.data
+    //    }
+    //  ];
+
+    //  $scope.advertisers = response;
+    //  $scope.loading = '';
+    //}, function(err){
+    //  $scope.mensagem = 'Não temos essa categoria cadastra :(';
+    //  $timeout(function(){
+    //    $scope.mensagem = '';
+    //    $scope.loading = '';
+    //  }, 3000);
+    //});
+  };
 
 
 }]);

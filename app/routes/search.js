@@ -11,6 +11,7 @@ module.exports = function(app){
 
       var sendJson = app.models[regiao];
 
+      console.log(sendJson);
 
       if(sendJson[0][query]){
         setTimeout(function(){

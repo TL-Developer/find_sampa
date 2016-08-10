@@ -4,7 +4,6 @@ var zsul = [
       {
         '_id': 0,
         'name': 'World Top Fitness',
-        'path': 'mercado-porto-seguro',
         'category': 'academias',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': [
@@ -30,7 +29,7 @@ var zsul = [
         },
         'social': [
           {
-            'icon': 'website',
+            'icon': 'sitemap',
             'src': 'http://www.mercadoportoseguro.com.br'
           },
           {
@@ -38,7 +37,7 @@ var zsul = [
             'src': 'http://www.facebook.com/mercado_porto_seguro'
           },
           {
-            'icon': 'email',
+            'icon': 'mail-forward',
             'src': 'mercadoportoseguro@portoseguro.com.br'
           }
         ],
@@ -53,6 +52,7 @@ var zsul = [
           }
         ],
         'images': {
+          'path': 'mercado-porto-seguro',
           'logo':'logo.jpg',
           'banner': 'banner.jpg',
           'galery': [
@@ -85,7 +85,6 @@ var zsul = [
       {
         '_id': 0,
         'name': 'Loja de roupas hello 10',
-        'path': 'mercado-porto-seguro',
         'category': 'lojas',
         'description': 'Mercado super barato e ótimo, aceitamos todos tipos de cartões.',
         'phones': [
@@ -134,6 +133,7 @@ var zsul = [
           }
         ],
         'images': {
+          'path': 'mercado-porto-seguro',
           'logo':'logo.jpg',
           'banner': 'banner.jpg',
           'galery': [
