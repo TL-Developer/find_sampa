@@ -1,0 +1,19 @@
+.create-galeria {
+
+  li {
+    position: relative;
+    overflow: none !important;
+
+    .btn-remove {
+      position: absolute;
+      right: 0;
+      top: -20px;
+
+      i {
+        color: red;
+        cursor: pointer;
+        font-size: 3em;
+      }
+    }
+  }
+}

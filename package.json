@@ -27,5 +27,8 @@
     "express-load": "^1.1.15",
     "helmet": "^2.1.1",
     "method-override": "^2.3.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
   }
 }

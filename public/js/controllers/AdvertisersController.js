@@ -6,7 +6,7 @@
     $scope.mensagem = '';
     $scope.categories = [];
     $scope.region = $stateParams.region;
-    $scope.limitAdvertisers = 9;
+    $scope.limitAdvertisers = 6;
 
     $scope.carregaMais = function(){
       $scope.limitAdvertisers+=3;

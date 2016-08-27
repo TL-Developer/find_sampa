@@ -8,7 +8,8 @@ angular.module('find-sampa').config(function($stateProvider){
 
       .state('newAdvertiser', {
         url: '/dashboard/new',
-        templateUrl: 'partials/server/create.html'
+        templateUrl: 'partials/server/create.html',
+        controller: 'CreateController'
       })
 //  $routeProvider.when('/dashboard', {
 //    templateUrl: 'partials/server/dashboard.html'

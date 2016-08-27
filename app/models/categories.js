@@ -12,6 +12,10 @@ var categories = [
       {
         name: 'Pizzarias',
         categorie: 'pizzarias'
+      },
+      {
+        name: 'Confeitarias',
+        categorie: 'confeitarias'
       }
     ],
 
