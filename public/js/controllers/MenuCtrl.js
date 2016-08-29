@@ -8,6 +8,9 @@ angular.module('find-sampa')
     erro: ''
   };
 
+  $scope.login = 'tiago';
+  $scope.senha = 'admin';
+
   $scope.acessarAdmin = function(form) {
 
     if(form.login == 'tiago' && form.senha == 'admin'){
