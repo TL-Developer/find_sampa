@@ -35,10 +35,10 @@
             <li>
               <form class="navbar-form navbar-left" ng-submit="acessarAdmin(this)">
                 <div class="form-group">
-                  <input type="text" placeholder="Login" class="form-control" ng-model="login">
+                  <input type="text" value="tiago" class="form-control" ng-model="login">
                 </div>
                 <div class="form-group">
-                  <input type="password" placeholder="Senha" class="form-control" ng-model="senha">
+                  <input type="password" value="admin" class="form-control" ng-model="senha">
                 </div>
                 <input type="submit" value="entrar" class="btn btn-raised btn-info">
                 <p ng-show="mensagemLogin.erro" class="text-danger">{{mensagemLogin.erro}}</p>
