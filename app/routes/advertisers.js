@@ -4,6 +4,4 @@ module.exports = function(app) {
 
   app.route('/api/v1/anunciantes')
     .get(controller.getAdvertisers);
-
-
 };
