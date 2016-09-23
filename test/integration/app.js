@@ -25,11 +25,9 @@ describe('Routes Advertisers', function(){
 
       request.get('/api/v1/anunciantes').end(function(err, res){
 
-        // expect(res.body[0].id).to.be.eql(default_advertisers[0].id);
-        console.log(res.body[0]);
+        expect(res.body[0]).to.have.property('zleste');
         done(err);
       });
-
     });
 
   });

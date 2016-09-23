@@ -558,8 +558,71 @@ var zleste = [
   }
 ];
 
+var mongoose = require('mongoose');
+
 module.exports = function(){
 
-  return zleste;
+  var schema_zleste = new mongoose.Schema({
+    mercados: [
+      {
+        name:  String,
+        category: String,
+        description: String,
+        phones: [
+          {
+            phone: [String]
+          },
+          {
+            cel: [String]
+          }
+        ],
+        address: {
+          address: String,
+          number: String,
+          neighbourhood: String,
+          region: String,
+          coordinates: {
+            latitude: String,
+            longitude: String
+          }
+        },
+        social: [
+          {
+            icon: String,
+            src: String
+          }
+        ],
+        office_hours: [
+          {
+            day: String,
+            info: String
+          }
+        ],
+        images: {
+          path: String,
+          logo: String,
+          banner: String,
+          galery: [String]
+        },
+        comments: [
+           {
+            name: String,
+            comment: String,
+            created: {
+              date: String,
+              hours: String
+            }
+          }
+        ],
+        stars: String,
+        created: {
+          type: Date,
+          default: new Date().toUTCString()
+        },
+        meta_tags: [String]
+      }
+    ]
+  });
 
+  return mongoose.model('zleste', schema_zleste);
 };
